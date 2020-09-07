@@ -44,9 +44,10 @@ namespace ConsoleApp1
 
 
             Console.WriteLine(Evennumbers[4]);
+            Main2();
         }
 
-        static void Main()
+        static void Main2()
         //IF STATEMENT
         {
               Console.Write("Please Enter Number = ");
