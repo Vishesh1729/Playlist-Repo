@@ -178,6 +178,34 @@ namespace ConsoleApp1
                 } while (Userchoice != "YES" && Userchoice != "NO");
 
             } while (Userchoice == "YES");
+            LOOPS();
+        }
+
+        static void LOOPS()
+        {
+            //DIfference between FOREACH loop,FOR loop, WHILE loop
+            int[] Number = new int[3];
+            Number[0] = 91;
+            Number[1] = 92;
+            Number[2] = 93;
+
+            //FOREACH LOOP
+            foreach (int k in Number)
+            {
+                Console.WriteLine(k);
+            }
+            //for loop
+            for (int j = 0; j < Number.Length; j++)
+            {
+                Console.WriteLine(Number[j]);
+            }
+            //while loop
+            int i = 0;
+            while (i < Number.Length)
+            {
+                Console.WriteLine(Number[i]);
+                i++;
+            }
         }
     }
 }
