@@ -206,6 +206,43 @@ namespace ConsoleApp1
                 Console.WriteLine(Number[i]);
                 i++;
             }
+            INSTANT();
+
+        }
+
+        static void INSTANT()
+        {
+            Program p = new Program();
+            p.Evennumber();//static is not written then this method is used
+        }
+
+        public void Evennumber()// static is not written then it is a Insatnt method
+        {
+            int i = 0;
+            while (i <= 20)
+            {
+                Console.WriteLine(i);
+                i = i + 2;
+            }
+            Main4();
+
+        }
+        static void Main4()
+        {
+            
+            Evennumber1();//static is written then this method is used
+        }
+
+        public static void Evennumber1()
+        {
+            int i = 0;
+            while (i <= 20)
+            {
+                Console.WriteLine(i);
+                i = i + 2;
+            }
+
         }
     }
+
 }
