@@ -10,7 +10,7 @@ namespace ConsoleApp1
     class Program
     {
         static void Main(string[] args)
-         //Datatype Conversion
+        //Datatype Conversion
         {
             int i = 100;
             float f = i;
@@ -20,127 +20,127 @@ namespace ConsoleApp1
 
             Console.WriteLine(h);
 
-             //Parse and Try Parse
+            //Parse and Try Parse
             string s = "100";
             int V = int.Parse(s);
             Console.WriteLine(V);
 
             string TRYPARSE = "100AV";
             int result = 0;
-            int.TryParse(TRYPARSE, out result );
+            int.TryParse(TRYPARSE, out result);
             Console.WriteLine(TRYPARSE);
             Main1();
         }
-       static void Main1()
-       // Arrays
-       {
-           int[] Evennumbers = new int[5];
+        static void Main1()
+        // Arrays
+        {
+            int[] Evennumbers = new int[5];
 
-           Evennumbers[0] = 0;
-           Evennumbers[1] = 2;
-           Evennumbers[2] = 4;
-           Evennumbers[3] = 6;
-           Evennumbers[4] = 8;
+            Evennumbers[0] = 0;
+            Evennumbers[1] = 2;
+            Evennumbers[2] = 4;
+            Evennumbers[3] = 6;
+            Evennumbers[4] = 8;
 
 
-           Console.WriteLine(Evennumbers[4]);
-           Main2();
-       }
+            Console.WriteLine(Evennumbers[4]);
+            Main2();
+        }
 
-       static void Main2()
-       //IF STATEMENT
-       {
-             Console.Write("Please Enter Number = ");
-             int Usernumber = Convert.ToInt32(Console.ReadLine());
+        static void Main2()
+        //IF STATEMENT
+        {
+            Console.Write("Please Enter Number = ");
+            int Usernumber = Convert.ToInt32(Console.ReadLine());
 
-             if (Usernumber == 1)
-             {
-                 Console.WriteLine("Your Number is 1");
-             }
+            if (Usernumber == 1)
+            {
+                Console.WriteLine("Your Number is 1");
+            }
             else if (Usernumber == 2)
-             {
-                 Console.WriteLine("Your Number is 2");
-             }
-             else if (Usernumber == 3)
-             {
-                 Console.WriteLine("Your Number is 3");
-             }
-             else 
-             {
-                 Console.WriteLine("YOUR NUMBER IS NOT IN 1 TO 3");
-             }
+            {
+                Console.WriteLine("Your Number is 2");
+            }
+            else if (Usernumber == 3)
+            {
+                Console.WriteLine("Your Number is 3");
+            }
+            else
+            {
+                Console.WriteLine("YOUR NUMBER IS NOT IN 1 TO 3");
+            }
 
-             //Switch Statement
+            //Switch Statement
 
-             Console.Write("Please Enter A Number = ");
-             int UserNumber = Convert.ToInt32(Console.ReadLine());    
+            Console.Write("Please Enter A Number = ");
+            int UserNumber = Convert.ToInt32(Console.ReadLine());
 
-             switch(UserNumber)
-             {
-                 case 1:
-                     Console.WriteLine("Your Number is 1");
-                     break;
-                 case 2:
-                     Console.WriteLine("Your Number is 2");
-                     break;
-                 case 3:
-                     Console.WriteLine("Your Number is 3");
-                     break;
-                 case 4:
-                     Console.WriteLine("Your Number is 4");
-                     break;
-                 default:
-                     Console.WriteLine("Your Number is not 1,2,3,4");
-                     break;
-             }
-           //Program With Switch statement
-           // ICE CREAM Shop Programming with Switch and Goto 
+            switch (UserNumber)
+            {
+                case 1:
+                    Console.WriteLine("Your Number is 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Your Number is 2");
+                    break;
+                case 3:
+                    Console.WriteLine("Your Number is 3");
+                    break;
+                case 4:
+                    Console.WriteLine("Your Number is 4");
+                    break;
+                default:
+                    Console.WriteLine("Your Number is not 1,2,3,4");
+                    break;
+            }
+            //Program With Switch statement
+            // ICE CREAM Shop Programming with Switch and Goto 
 
-           int TotalIcecreamCost = 0;
-           Retry:
-           Console.WriteLine("Please Select Coffee Flavour From Menu");
-           Console.WriteLine("1 Chocolate");
-           Console.WriteLine("2 Vanilla");
-           Console.WriteLine("3 Rajbhog");
-           string CustomerChoice = Console.ReadLine();
+            int TotalIcecreamCost = 0;
+        Retry:
+            Console.WriteLine("Please Select Coffee Flavour From Menu");
+            Console.WriteLine("1 Chocolate");
+            Console.WriteLine("2 Vanilla");
+            Console.WriteLine("3 Rajbhog");
+            string CustomerChoice = Console.ReadLine();
 
-           switch(CustomerChoice)
-           {
-               case "1":
-                   TotalIcecreamCost += 30;
-                   break;
-               case "2":
-                   TotalIcecreamCost += 20;
-                   break;
-               case "3":
-                   TotalIcecreamCost += 40;
-                   break;
-               default :
-                   Console.WriteLine("Your Choice {0} is Invalid", CustomerChoice);
-                   goto Retry;
+            switch (CustomerChoice)
+            {
+                case "1":
+                    TotalIcecreamCost += 30;
+                    break;
+                case "2":
+                    TotalIcecreamCost += 20;
+                    break;
+                case "3":
+                    TotalIcecreamCost += 40;
+                    break;
+                default:
+                    Console.WriteLine("Your Choice {0} is Invalid", CustomerChoice);
+                    goto Retry;
 
-           }
-           Error:
-           Console.WriteLine("Do you Want To Purchase More");
-           Console.WriteLine("Yes or No");
-           string CustomerDesicion = Console.ReadLine();
+            }
+        Error:
+            Console.WriteLine("Do you Want To Purchase More");
+            Console.WriteLine("Yes or No");
+            string CustomerDesicion = Console.ReadLine();
 
-           switch(CustomerDesicion.ToUpper())
-           {
-               case "YES"://while converting to upper case (yes) should be in upper case and vice versa
-                   goto Retry;
-               case "NO":
-                   break;
-               default:
-                   Console.WriteLine("Your choice {0} is invalid", CustomerDesicion);
-                   goto Error;
-           }
+            switch (CustomerDesicion.ToUpper())
+            {
+                case "YES"://while converting to upper case (yes) should be in upper case and vice versa
+                    goto Retry;
+                case "NO":
+                    break;
+                default:
+                    Console.WriteLine("Your choice {0} is invalid", CustomerDesicion);
+                    goto Error;
+            }
 
 
-           Console.WriteLine("Bill amount = {0}", TotalIcecreamCost);
-           Console.WriteLine("Thanks For Shopping ");
-        Main3();
-       }
+            Console.WriteLine("Bill amount = {0}", TotalIcecreamCost);
+            Console.WriteLine("Thanks For Shopping ");
+            Main3();
+        }
         static void Main3()
         {
             string Userchoice = string.Empty;
@@ -157,7 +157,7 @@ namespace ConsoleApp1
                 }
 
                 //Do While
-                
+
                 Console.Write("Please Enter a Number = ");
                 int UserTarget1 = int.Parse(Console.ReadLine());
 
@@ -171,13 +171,14 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Do you want to Continue - Yes or No");
                     Userchoice = Console.ReadLine().ToUpper();
-                    if (Userchoice != "YES" && Userchoice != "NO") 
+                    if (Userchoice != "YES" && Userchoice != "NO")
                     {
                         Console.WriteLine("Inavalid Choice, Please say Yes or No");
                     }
                 } while (Userchoice != "YES" && Userchoice != "NO");
 
             } while (Userchoice == "YES");
+            Console.ReadLine();
             LOOPS();
         }
 
@@ -206,6 +207,7 @@ namespace ConsoleApp1
                 Console.WriteLine(Number[i]);
                 i++;
             }
+            Console.ReadLine();
             INSTANT();
 
         }
@@ -229,7 +231,7 @@ namespace ConsoleApp1
         }
         static void Main4()
         {
-            
+
             Evennumber1();//static is written then this method is used
         }
 
@@ -241,7 +243,60 @@ namespace ConsoleApp1
                 Console.WriteLine(i);
                 i = i + 2;
             }
+            Console.ReadLine();
+            Outparameter();
+        }
+        static void Outparameter()
+        {
+            int Sum = 0;
+            int Product = 0;
 
+            Calculator(9, 10, out Sum, out Product);
+            Console.WriteLine("Total = {0} && Product = {1}", Sum, Product);
+        }
+        public static void Calculator(int FN, int SN, out int Sum, out int Product)
+        {
+            Sum = FN + SN;
+            Product = FN * SN;
+            Refparameter();
+
+        }
+         
+        static void Refparameter()
+        {
+            int i = 0;
+            Simplemethod(ref i);
+            Console.WriteLine(i);
+
+        }
+        static void Simplemethod(ref int j)
+        {
+            j = 10;
+            ParameterArrays();
+        }
+
+        static void ParameterArrays()
+        {
+            int[] Numbers = new int[4];
+            Numbers[0] = 20;
+            Numbers[1] = 30;
+            Numbers[2] = 40;
+            Numbers[3] = 50;
+            
+            ParamsArrays(Numbers);
+            ParamsArrays(1, 2, 3, 4, 5);// this is method argument
+
+        }
+        public static void ParamsArrays(params int[] Numbers)
+            //if any other parameter is there then Parameter array should be last one
+            //MAin(int i, param int [] Numbers) Should br order
+            //Only one parameter should be in method
+        {
+            Console.WriteLine("There are {0} element in Array", Numbers.Length);
+            foreach (int i in Numbers)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 
