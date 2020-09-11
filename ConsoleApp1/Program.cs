@@ -4,6 +4,8 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using PATA = ProjectA.Team1;
+using PATB = ProjectA.Team2;
 
 namespace ConsoleApp1
 {
@@ -298,6 +300,42 @@ namespace ConsoleApp1
                 Console.WriteLine(i);
             }
         }
+
+       public static void NAMESPACE()
+        {
+            ProjectA.Team1.ClassA.PROJECT1();// First Method Write Fully Qualified Name
+            ProjectA.Team2.ClassB.PROJECT1();
+
+            PATA.ClassA.PROJECT1();//Other way is to Make abbrevation with "using" in top
+            PATB.ClassB.PROJECT1();
+
+        }
     }
 
+}
+
+namespace ProjectA
+{
+    namespace Team1
+    {
+        class ClassA
+        {
+            public static void PROJECT1()
+            {
+                Console.WriteLine("Hey");
+                
+            }
+        }
+    }
+    namespace Team2
+    {
+        class ClassB
+        {
+            public static void PROJECT1() //Make public to link with other class
+            {
+                Console.WriteLine("Hi");
+                
+            }
+        }
+    }
 }
